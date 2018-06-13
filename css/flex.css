@@ -1,0 +1,103 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div.container {
+    max-width: 1000px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+}
+
+header, footer {
+    height: 60px;
+    background-color: rgb(50, 50, 50);
+    color: rgb(225, 225, 225);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div, footer > div{ /* > fala para pegar somente os filhos imediatos, ou seja, diretos, sem contar os netos e etc*/
+    display: flex;
+    width: 220px;
+    /* margin: 10px; ou: */
+    height: 40px;
+    align-items: center;
+}
+
+footer > div {
+    width: 350px;
+    font-size: 0.8em
+}
+
+footer div.right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header > div > img, footer > div >img {
+    /* margin-left: 10px;
+    margin-right: 10px;
+    Ou:*/
+    margin: 0 10px;
+}
+
+h1 {
+    font-family: 'Rock Salt', 'Comic Sans';
+    font-size: 1.5em;
+}
+
+header > div:last-child > div{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* align-items: center; */
+}
+
+div.conteudo{
+    display: flex;
+}
+
+div.conteudo > * { /* '*' para todos os filhos imediatos de .conteudo*/
+    padding: 10px;
+}
+
+h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+section.noticias > article {
+    margin: 10px 0;
+}
+
+section.noticias > article > div {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.noticias > article > div:first-child{
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: powderblue;
+}
+
+aside > * {
+    margin-bottom: 20px;
+}
+
+article:not(:last-child) {
+    border-bottom: 1px dashed gray;
+}
